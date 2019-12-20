@@ -32,4 +32,3 @@ def ars(taskset, config, callback=None):
         results = get_optimization_results(t, N, factors)
         if callback:
             callback(results)
-    return np.array(stats)

@@ -24,9 +24,9 @@ def main():
         os.mkdir('data/%s' % instance)
 
     # Start workers
-    # wm = WorkerManager()
-    # wm.start_redis()
-    # wm.create_workers()
+    wm = WorkerManager()
+    wm.start_redis()
+    wm.create_workers()
 
     # Start master
     mp = MujocoParallel(benchmark)
