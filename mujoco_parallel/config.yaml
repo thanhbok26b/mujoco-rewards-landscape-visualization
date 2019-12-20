@@ -1,0 +1,77 @@
+---
+redis_keys:
+  capacity: 1024
+  env_names: env_names
+  policy: policy
+  normalizer: normalizer
+  normalizer_hash: normalizer_hash
+  job: job
+  trajectory: trajectory
+  env_name: env_name
+
+
+
+
+
+
+benchmarks:
+
+  sanity-check:
+    instance: sanity-check
+    n: 11
+    p: 3    
+    names:
+      - Hopper-v1
+
+  hopper-gravity:
+    instance: hopper-gravity
+    n: 11
+    p: 3
+    names:
+      - HopperGravityHalf-v0
+      - HopperGravityThreeQuarters-v0
+      - Hopper-v1
+      - HopperGravityOneAndQuarter-v0
+      - HopperGravityOneAndHalf-v0
+
+  hopper-size:
+    instance: hopper-size
+    n: 11
+    p: 3
+    names:
+      - HopperSmallFoot-v0
+      - HopperSmallLeg-v0
+      - HopperSmallThigh-v0
+      - HopperSmallTorso-v0
+      - HopperBigFoot-v0
+      - HopperBigLeg-v0
+      - HopperBigThigh-v0
+      - HopperBigTorso-v0
+      - Hopper-v1'
+
+  halfcheetah-gravity:
+    instance: halfcheetah-gravity
+    n: 17
+    p: 6
+    names:
+      - HalfCheetahGravityHalf-v0
+      - HalfCheetahGravityThreeQuarters-v0
+      - HalfCheetah-v1
+      - HalfCheetahGravityOneAndQuarter-v0
+      - HalfCheetahGravityOneAndHalf-v0'
+
+  halfcheetah-size:
+    instance: halfcheetah-size
+    n: 17
+    p: 6
+    names:
+      - HalfCheetahSmallFoot-v0
+      - HalfCheetahSmallLeg-v0
+      - HalfCheetahSmallThigh-v0
+      - HalfCheetahSmallTorso-v0
+      - HalfCheetahBigFoot-v0
+      - HalfCheetahBigLeg-v0
+      - HalfCheetahBigThigh-v0
+      - HalfCheetahBigTorso-v0
+      - HalfCheetah-v1
+      
