@@ -17,7 +17,7 @@ class WorkerManager(object):
       List of subprocess of workers
     '''
     self.redis   = None
-    self.workers = None    
+    self.workers = None
 
   def start_redis(self):
     self.redis = subprocess.Popen(['redis-server'])

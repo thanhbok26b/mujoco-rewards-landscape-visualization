@@ -97,14 +97,14 @@ class Worker(object):
           }
           policy = self.get_policy(i)
           name, env, normalizer = self.get_env()
-          # env.seed(0)
+#           env.seed(0)
           state = env.reset()
           while 1:
             state = normalizer.normalize(state)
             action = policy @ state
             state, reward, done, _ = env.step(action)
             trajectory['state'].append(state)
-            trajectory['action'].append(action)            
+            trajectory['action'].append(action)
             trajectory['reward'].append(reward)
             if done:
               break

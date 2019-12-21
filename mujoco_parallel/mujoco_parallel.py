@@ -31,8 +31,8 @@ class MujocoParallel(object):
     self.dim_n    = benchmark['n']
     self.dim      = self.dim_p * self.dim_n
     self.names    = benchmark['names']
-    self.instance = benchmark['instance']    
-    
+    self.instance = benchmark['instance'] 
+
   def initialize_normalizers(self, benchmark):
     self.normalizers = {}
     for name in benchmark['names']:
@@ -57,7 +57,7 @@ class MujocoParallel(object):
         time.sleep(0.03)
       else:
         break
-    
+
   def get_trajectories(self, n_eval):
     while 1:
       try: trajectories = [self.deserialize(trajectory) for trajectory in self.db.lrange(TRAJECTORY, 0, n_eval-1)]

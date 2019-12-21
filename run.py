@@ -23,10 +23,10 @@ def main():
     if not os.path.exists('data/%s' % instance):
         os.mkdir('data/%s' % instance)
 
-    # Start workers
-    wm = WorkerManager()
-    wm.start_redis()
-    wm.create_workers()
+#    # Start workers
+#    wm = WorkerManager()
+#    wm.start_redis()
+#    wm.create_workers()
 
     # Start master
     mp = MujocoParallel(benchmark)

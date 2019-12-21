@@ -29,6 +29,6 @@ def ars(taskset, config, callback=None):
         # info
         desc = 'ARS generation=%d %s' % (t, ' '.join(['%0.4f' % factors[k].f_opt for k in range(K)]))
         iterator.set_description(desc)
-        results = get_optimization_results(t, N, factors)
+        results = get_optimization_results(t, N, factors, taskset)
         if callback:
             callback(results)

@@ -4,3 +4,4 @@ alpha: 0.02
 sigma: 0.02
 instance: sanity-check
 repeat: 1
+vis_iteration: 10
