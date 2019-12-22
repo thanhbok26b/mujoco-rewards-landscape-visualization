@@ -41,12 +41,12 @@ def main():
     mp = MujocoParallel(benchmark)
     mp.normalizers = normalizers
 
-    for i in range(config['repeat']):
+    for i in range(1, config['repeat']):
         results = []
         ars(mp, config, callback)
         obj = pickle.dumps(results, protocol=4)
-#        with open('data/%s/%d.pkl' % (instance, i), 'wb') as fp:
-#            fp.write(obj)
+        with open('data/%s/%d.pkl' % (instance, i), 'wb') as fp:
+            fp.write(obj)
 
 if __name__ == '__main__':
     main()

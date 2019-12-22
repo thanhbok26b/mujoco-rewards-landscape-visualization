@@ -1,7 +1,7 @@
-num_iteration: 200
+num_iteration: 100
 num_direction: 16
 alpha: 0.02
 sigma: 0.02
 instance: sanity-check
-repeat: 1
-vis_iteration: 10
+repeat: 2
+vis_iteration: 20
