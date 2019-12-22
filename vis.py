@@ -1,6 +1,7 @@
 from mujoco_parallel import MujocoParallel, benchmarks
 from mpl_toolkits.mplot3d import axes3d
 import matplotlib.pyplot as plt
+from scipy.io import savemat
 from matplotlib import cm
 from copy import deepcopy
 from tqdm import trange
@@ -39,8 +40,8 @@ def main():
     print('    Parameter', theta)
 
     # generate vis data
-    x1 = np.linspace(-1, 1, 20)
-    x2 = np.linspace(-1, 1, 20)
+    x1 = np.linspace(-1, 1, 10)
+    x2 = np.linspace(-1, 1, 10)
     X1, X2 = np.meshgrid(x1, x2)
 
     # render Y
@@ -56,11 +57,14 @@ def main():
             desc = 'Y[%d, %d] = %0.4f' % (i, j, Y[i, j])
             iterator.set_description(desc)
 
+    # save data for ploting
+    savemat('data/vis/reward-landscape.mat', {'X1':X1, 'X2':X2, 'Y':Y})
+
     # actual ploting
-    fig = plt.figure()
-    ax = fig.gca(projection='3d')
-    ax.plot_surface(X1, X2, Y, rstride=8, cstride=8, alpha=0.3)
-    plt.show()
+#    fig = plt.figure()
+#    ax = fig.gca(projection='3d')
+#    ax.plot_surface(X1, X2, Y, rstride=8, cstride=8, alpha=0.3)
+#    plt.show()
 
 if __name__ == '__main__':
     main()
